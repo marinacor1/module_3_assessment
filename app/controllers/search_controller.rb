@@ -10,7 +10,7 @@ class SearchController < ApplicationController
 
   def show
     store = Store.new
-    specific_store = store.one_store_info(params['zip'], params['id'])
+    @specific_store = store.one_store_info(params['zip'], params['id'])
   end
 
 end
