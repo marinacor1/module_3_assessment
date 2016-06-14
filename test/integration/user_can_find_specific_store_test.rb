@@ -6,7 +6,7 @@ class IndividaulStoreFeatureTest < ActionDispatch::IntegrationTest
     Capybara.app = Storedom::Application
   end
 
-  def test_user_finds_ndividual_store_by_zip
+  def test_user_finds_individual_store_by_zip
     visit '/'
 
     fill_in('Search', :with => '80202')
