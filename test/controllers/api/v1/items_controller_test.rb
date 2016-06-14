@@ -22,4 +22,16 @@ class Api::V1::ItemsControllerTest < ActionController::TestCase
     assert_equal "its a thing",  parsed_json['description']
     assert_equal "http://static.comicvine.com/uploads/original/11116/111163466/4650999-3128845011-300379.jpeg", parsed_json['image_url']
   end
+
+  test "should delete item" do
+    skip
+    delete :destroy, id: 1, format: :json
+    parsed_json = JSON.parse(response.body)
+
+    assert_response :success
+    assert_equal Hash,  parsed_json.class
+    assert_equal "thing",  parsed_json['name']
+    assert_equal "its a thing",  parsed_json['description']
+    assert_equal "http://static.comicvine.com/uploads/original/11116/111163466/4650999-3128845011-300379.jpeg", parsed_json['image_url']
+  end
 end

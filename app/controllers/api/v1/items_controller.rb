@@ -10,6 +10,10 @@ module Api
       def show
         respond_with Item.find(params['id'])
       end
+
+      def destroy
+        respond_with Item.find(params['id']), method: :delete
+      end
     end
   end
 end
