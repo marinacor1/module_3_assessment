@@ -1,5 +1,4 @@
 class SearchController < ApplicationController
-  attr_reader :zip
 
   def index
     @zip = params['q']
