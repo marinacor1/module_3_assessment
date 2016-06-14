@@ -6,9 +6,8 @@ class Api::V1::ItemsControllerTest < ActionController::TestCase
     parsed_json = JSON.parse(response.body)
 
     assert_response :success
-
-    assert parsed_json.first.include?("Name")
-    assert parsed_json.first.include?("Description")
+    assert_equal 1000,  parsed_json.count
+    assert_equal "Name:",  parsed_json
     assert parsed_json.first.include?("Image Url")
     refute parsed_json.first.include?("Created At")
     refute parsed_json.first.include?("Updated At")
