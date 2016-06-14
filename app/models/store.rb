@@ -8,6 +8,7 @@ class Store < OpenStruct
   def store_information(zip)
     stores = service.close_stores_hash(zip)["stores"]
     stores.map do |store|
+      binding.pry
       {phone: store['phone'],
       name: store['longName'],
       distance: store['distance'],

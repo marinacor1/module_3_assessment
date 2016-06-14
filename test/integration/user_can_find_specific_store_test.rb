@@ -13,10 +13,10 @@ class IndividaulStoreFeatureTest < ActionDispatch::IntegrationTest
     click_on 'Search'
 
     assert_equal '/search', current_path
-
     click_on 'Best Buy Mobile - Cherry Creek Shopping Center'
 
-    assert_equal '/stores/store_id'
+
+    assert_equal '/stores/2740', current_path
 
     assert page.has_content?('Name:')
     assert page.has_content?('Address:')
