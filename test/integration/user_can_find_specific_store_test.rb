@@ -13,6 +13,7 @@ class IndividualStoreFeatureTest < ActionDispatch::IntegrationTest
     click_on 'Search'
 
     assert_equal '/search', current_path
+    
     click_on 'Best Buy Mobile - Cherry Creek Shopping Center'
 
     assert page.has_content?('Name: Cherry Creek Shopping Center')
