@@ -7,5 +7,6 @@ class Store < OpenStruct
 
   def store_information(zip)
     stores = service.close_stores_hash(zip)
+    binding.pry
   end
 end
