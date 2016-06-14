@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :orders, only: [:index, :show]
   resources :users,  only: [:index, :show]
 
+  get '/search', to: 'search#index'
   namespace :api, defaults: {format: :json} do
     namespace :v1 do
       resources :items

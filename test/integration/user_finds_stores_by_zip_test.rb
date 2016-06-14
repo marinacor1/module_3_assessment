@@ -8,7 +8,6 @@ class ItemsFeatureTest < ActionDispatch::IntegrationTest
 
   def test_user_finds_stores_by_zip
     visit '/'
-save_and_open_page
 
     fill_in('Search', :with => '80202')
     click_on 'Search'
