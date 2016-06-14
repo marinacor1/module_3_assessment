@@ -12,4 +12,8 @@ class BuyService
     @connection.get "https://api.bestbuy.com/v1/stores(area(#{zip},25))?format=json&show=storeId,phone,storeType,longName,distance&pageSize=15&apiKey=#{ENV['bb_key']}"
   end
 
+  def close_stores_hash(zip)
+    parse(get_close_stores(zip))
+  end
+
 end
