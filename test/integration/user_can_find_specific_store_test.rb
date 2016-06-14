@@ -14,13 +14,17 @@ class ItemsFeatureTest < ActionDispatch::IntegrationTest
 
     assert_equal '/search', current_path
 
-    assert page.has_content?('Stores 25 miles of 80202')
-    assert page.has_content?('17 Total Stores')
-    assert page.has_content?('Long Name:')
+    click_on 'Best Buy Mobile - Cherry Creek Shopping Center'
+
+    assert_equal '/stores/store_id'
+
+    assert page.has_content?('Name:')
+    assert page.has_content?('Address:')
     assert page.has_content?('City:')
-    assert page.has_content?('Distance:')
-    assert page.has_content?('Phone:')
-    assert page.has_content?('Store Type:')
+    assert page.has_content?('State:')
+    assert page.has_content?('Zip Code:')
+    assert page.has_content?('Store Hours:')
+
   end
 
 end

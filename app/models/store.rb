@@ -12,7 +12,8 @@ class Store < OpenStruct
       name: store['longName'],
       distance: store['distance'],
       type: store['storeType'],
-      city: store['city']}
+      city: store['city'],
+      id: store['storeId']}
     end
   end
 end
