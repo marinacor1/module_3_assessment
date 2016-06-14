@@ -24,5 +24,6 @@ end
 group :development, :test do
   gem "minitest-rails-capybara"
   gem "pry", :require => "pry"
+  gem 'launchy'
   gem 'rspec-rails', '~> 3.4'
 end
