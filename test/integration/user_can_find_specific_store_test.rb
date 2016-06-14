@@ -15,8 +15,8 @@ class IndividualStoreFeatureTest < ActionDispatch::IntegrationTest
     assert_equal '/search', current_path
     click_on 'Best Buy Mobile - Cherry Creek Shopping Center'
 
-    assert page.has_content?('Name:')
-    assert page.has_content?('Address:')
+    assert page.has_content?('Name: Cherry Creek Shopping Center')
+    assert page.has_content?('Address: Denver, CO 80206')
     assert page.has_content?('Store Hours:')
 
   end
