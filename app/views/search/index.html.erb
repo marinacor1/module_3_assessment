@@ -1,1 +1,10 @@
 <h1>Stores 25 miles of <%= @zip %></h1>
+
+<% @stores.each do |store| %>
+  <ul>
+    Name: <%= store[:name] %>
+    <li>Phone: <%= store[:phone] %></li>
+    <li>Distance: <%= store[:distance] %></li>
+    <li>Store Type: <%= store[:type] %></li>
+  </ul>
+<% end %>
