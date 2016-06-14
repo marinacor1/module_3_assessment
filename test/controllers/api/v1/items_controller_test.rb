@@ -7,9 +7,8 @@ class Api::V1::ItemsControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_equal 2,  parsed_json.count
-    assert_equal "Name:",  parsed_json
-    assert parsed_json.first.include?("Image Url")
-    refute parsed_json.first.include?("Created At")
-    refute parsed_json.first.include?("Updated At")
+    assert_equal "sock",  parsed_json.first['name']
+    assert_equal "its a sock",  parsed_json.first['description']
+    assert_equal "http://cdn3.volusion.com/uctgf.ukzte/v/vspfiles/photos/The-Carlton-2.jpg?1431093530", parsed_json.first['image_url']
   end
 end
