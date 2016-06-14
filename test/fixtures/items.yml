@@ -1,4 +1,5 @@
 one:
+  id: 1
   name: "thing"
   description: "its a thing"
   image_url: "http://static.comicvine.com/uploads/original/11116/111163466/4650999-3128845011-300379.jpeg"
@@ -6,6 +7,7 @@ one:
   updated_at: 02-12-12
 
 two:
+  id: 2
   name: "sock"
   description: "its a sock"
   image_url: "http://cdn3.volusion.com/uctgf.ukzte/v/vspfiles/photos/The-Carlton-2.jpg?1431093530"
