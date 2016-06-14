@@ -4,7 +4,7 @@ module Api
       respond_to :json
 
       def index
-        respond_with Items.all
+        respond_with Item.all
       end
     end
   end
