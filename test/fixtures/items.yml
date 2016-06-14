@@ -1,0 +1,13 @@
+one:
+  name: "thing"
+  description: "its a thing"
+  image_url: "http://static.comicvine.com/uploads/original/11116/111163466/4650999-3128845011-300379.jpeg"
+  created_at: 01-01-13
+  updated_at: 02-12-12
+
+two:
+  name: "sock"
+  description: "its a sock"
+  image_url: "http://cdn3.volusion.com/uctgf.ukzte/v/vspfiles/photos/The-Carlton-2.jpg?1431093530"
+  created_at: 04-11-15
+  updated_at: 05-12-16
